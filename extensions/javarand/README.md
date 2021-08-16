@@ -1,6 +1,6 @@
 # javarand
 
-This extension is Cython implementation of the current Java Random utility found in Java 16.
+This extension is a Cython implementation of the current Java Random utility found in Java 16.
 
 ## Building and Installing
 
