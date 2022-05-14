@@ -1,0 +1,5 @@
+cpdef float lerpf(float delta, float start, float end)
+cpdef double lerp(double delta, double start, double end)
+cpdef double lerp2(double deltaX, double deltaY, double x0y0, double x1y0, double x0y1, double x1y1)
+cpdef double lerp3(double deltaX, double deltaY, double deltaZ, double x0y0z0, double x1y0z0, double x0y1z0, double x1y1z0, double x0y0z1, double x1y0z1, double x0y1z1, double x1y1z1)
+cpdef double clampedLerp(double start, double end, double delta)

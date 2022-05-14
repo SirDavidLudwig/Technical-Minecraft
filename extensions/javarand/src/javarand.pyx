@@ -52,10 +52,6 @@ cdef class Random:
     # @param seed the initial seed
     # @see   #setSeed(long)
 
-    cdef public long long __seedUniquifier
-
-    cdef public long long seed
-
     def __init__(self, seed=None):
         self.__seedUniquifier = 8682522807148012l
         if seed is None:
@@ -101,7 +97,7 @@ cdef class Random:
     #
     # @param seed the initial seed
 
-    cdef void setSeed(self, long long seed):
+    cpdef void setSeed(self, long long seed):
         self.seed = self.initialScramble(seed)
         self.haveNextNextGaussian = False
 
@@ -461,9 +457,6 @@ cdef class Random:
 
     cpdef double nextDouble(self):
         return ((<long long>(self.nextBits(26)) << 27) + self.nextBits(27)) * DOUBLE_UNIT
-
-    cdef double nextNextGaussian
-    cdef bint haveNextNextGaussian
 
 
      # Returns the next pseudorandom, Gaussian ("normally") distributed

@@ -7,6 +7,7 @@ extensions = [Extension("javarand", ["src/javarand.pyx"])]
 setup(
 	name='javarand',
 	version='0.1',
+	include = ["./src/*.pxd"],
 	ext_modules = cythonize(extensions, language_level="3"),
 	zip_safe=False
 )
